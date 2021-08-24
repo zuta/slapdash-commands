@@ -1,6 +1,5 @@
 {
   "github": {
-    "silent": true,
-    "autoAlias": false
+    "silent": true
   }
 }

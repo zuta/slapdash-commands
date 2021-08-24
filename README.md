@@ -9,6 +9,7 @@ All Cloud Commands are deployed to the cloud via [Vercel](https://vercel.com/). 
 | Command                                                                                                  | Description                                | Public URL                                          |
 | -------------------------------------------------------------------------------------------------------- | ------------------------------------------ | --------------------------------------------------- |
 | [Vercel Projects](https://github.com/zuta/slapdash-commands/blob/master/api/slapdash/vercel-projects.ts) | Quickly search & jump to a Vercel project. | [taraszubyk.com/api/slapdash/vercel-projects](https://taraszubyk.com/api/slapdash/vercel-projects) |
+| [Unsplash Search](https://github.com/zuta/slapdash-commands/blob/master/api/slapdash/unsplash-search.ts) | Search free high quality photos from [Unsplash](https://unsplash.com/). | [taraszubyk.com/api/slapdash/vercel-projects](https://taraszubyk.com/api/slapdash/unsplash-search) |
 
 ### Local Commands
 
