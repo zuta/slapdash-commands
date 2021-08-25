@@ -6,8 +6,10 @@
   },
   "dependencies": {
     "@types/node-fetch": "^2.5.12",
+    "@types/ua-parser-js": "^0.7.36",
     "@vercel/frameworks": "^0.5.0",
-    "node-fetch": "^2.6.1"
+    "node-fetch": "^2.6.1",
+    "ua-parser-js": "^0.7.28"
   },
   "devDependencies": {
     "@slapdash/command-response-types": "^1.0.3",

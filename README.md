@@ -10,6 +10,7 @@ All Cloud Commands are deployed to the cloud via [Vercel](https://vercel.com/). 
 | -------------------------------------------------------------------------------------------------------- | ------------------------------------------ | --------------------------------------------------- |
 | [Vercel Projects](https://github.com/zuta/slapdash-commands/blob/master/api/slapdash/vercel-projects.ts) | Quickly search & jump to a Vercel project. | [taraszubyk.com/api/slapdash/vercel-projects](https://taraszubyk.com/api/slapdash/vercel-projects) |
 | [Unsplash Search](https://github.com/zuta/slapdash-commands/blob/master/api/slapdash/unsplash-search.ts) | Search free high quality photos from [Unsplash](https://unsplash.com/). | [taraszubyk.com/api/slapdash/unsplash-search](https://taraszubyk.com/api/slapdash/unsplash-search) |
+| [Parse User-Agent](https://github.com/zuta/slapdash-commands/blob/master/api/slapdash/parse-user-agent.ts) | Parse a User-Agent string by pasting it into the Command Bar. | [taraszubyk.com/api/slapdash/parse-user-agent](https://taraszubyk.com/api/slapdash/parse-user-agent) |
 
 ### Local Commands
 
