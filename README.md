@@ -12,6 +12,7 @@ All Cloud Commands are deployed to the cloud via [Vercel](https://vercel.com/). 
 | [Unsplash Search](https://github.com/zuta/slapdash-commands/blob/master/api/slapdash/unsplash-search.ts)   | Search free high quality photos from [Unsplash](https://unsplash.com/). | [taraszubyk.com/api/slapdash/unsplash-search](https://taraszubyk.com/api/slapdash/unsplash-search)   |
 | [Parse User-Agent](https://github.com/zuta/slapdash-commands/blob/master/api/slapdash/parse-user-agent.ts) | Parse a User-Agent string by pasting it into the Command Bar.           | [taraszubyk.com/api/slapdash/parse-user-agent](https://taraszubyk.com/api/slapdash/parse-user-agent) |
 | [HN Front Page](https://github.com/zuta/slapdash-commands/blob/master/api/slapdash/hn-front-page.ts)       | Scan through the HN front page and jump to a post or its comments.      | [taraszubyk.com/api/slapdash/hn-front-page](https://taraszubyk.com/api/slapdash/hn-front-page)       |
+| [Icon Finder](https://github.com/zuta/slapdash-commands/blob/master/api/slapdash/iconfinder.ts)       | Search for icons from [Iconfinder](https://www.iconfinder.com/).      | [taraszubyk.com/api/slapdash/iconfinder](https://taraszubyk.com/api/slapdash/iconfinder)       |
 
 ### Local Commands
 
