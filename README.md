@@ -20,4 +20,4 @@ To add a Local Command to your Slapdash account, follow the steps in the [Slapda
 
 | Command                                                                                                    | Description                             |
 | ---------------------------------------------------------------------------------------------------------- | --------------------------------------- |
-| [Copy IP Address](https://github.com/zuta/slapdash-commands/blob/master/local-commands/copy-ip-address.sh) | Copy your private or public IP address. |
+| [Copy IP Address](https://github.com/zuta/slapdash-commands/blob/master/slapdash/local-commands/copy-ip-address.sh) | Copy your private or public IP address. |
