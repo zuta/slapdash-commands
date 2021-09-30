@@ -31,9 +31,10 @@ export default async (req: VercelRequest, res: VercelResponse) => {
       : await rootResponse(keywords, config)
     : await configResponse();
   res.setHeader("Access-Control-Allow-Origin", "*");
-  Object.values(CONFIG).forEach((config) => {
-    res.setHeader("Access-Control-Allow-Headers", config);
-  });
+  res.setHeader(
+    "Access-Control-Allow-Headers",
+    Object.values(CONFIG).join(", ")
+  );
   res.json(response);
 };
 
