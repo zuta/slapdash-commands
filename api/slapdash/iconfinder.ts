@@ -96,12 +96,13 @@ async function configResponse(): Promise<CommandResponse> {
 async function rootResponse(
   query: string,
   {
-    count,
+    count: countStr,
     type,
     style,
     premium,
   }: { count: string; premium?: string; type?: string; style?: string }
 ): Promise<CommandResponse> {
+  const count = Math.min(parseInt(countStr), 50);
   premium = premium === "true" ? "all" : "0";
   style = style ?? "";
   type = type ?? "";
@@ -110,6 +111,7 @@ async function rootResponse(
   );
   const { icons } = (await apiResponse.json()) as { icons: Icon[] };
   return {
+    inputPlaceholder: "Type to search icons",
     view: {
       type: "list",
       options: await Promise.all(
