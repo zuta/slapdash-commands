@@ -106,10 +106,14 @@ async function rootResponse(
   premium = premium === "true" ? "all" : "0";
   style = style ?? "";
   type = type ?? "";
-  const apiResponse = await apiCall(
-    `search?query=${query}&count=${count}&vector=${type}&premium=${premium}&style=${style}`
-  );
-  const { icons } = (await apiResponse.json()) as { icons: Icon[] };
+  let icons: Icon[] = [];
+  if (query) {
+    const apiResponse = await apiCall(
+      `search?query=${query}&count=${count}&vector=${type}&premium=${premium}&style=${style}`
+    );
+    icons = ((await apiResponse.json()) as { icons: Icon[] }).icons;
+  }
+
   return {
     inputPlaceholder: "Type to search icons",
     view: {
