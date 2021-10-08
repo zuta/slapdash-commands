@@ -9,7 +9,6 @@ import { frameworks } from "@vercel/frameworks";
 
 const CONFIG_TOKEN = "token";
 const PARAM_PROJECT = "project";
-const PARAM_KEYWORDS = "keywords";
 
 const VERCEL_ICON: Icon = {
   monochrome: `<svg height="26" viewBox="0 0 75 65" fill="#000" xmlns="http://www.w3.org/2000/svg"><path d="M37.59.25l36.95 64H.64l36.95-64z"></path></svg>`,
@@ -18,13 +17,12 @@ const VERCEL_ICON: Icon = {
 export default async (req: VercelRequest, res: VercelResponse) => {
   const token = req.headers[CONFIG_TOKEN]?.toString();
   const projectID = req.query[PARAM_PROJECT]?.toString();
-  const keywords = req.query[PARAM_KEYWORDS]?.toString() ?? "";
   let response: CommandResponse;
   try {
     response = token
       ? projectID
         ? await projectResponse(token, projectID)
-        : await projectsResponse(token, keywords)
+        : await projectsResponse(token)
       : await configResponse();
   } catch (e) {
     response = {
@@ -40,12 +38,9 @@ export default async (req: VercelRequest, res: VercelResponse) => {
   res.json(response);
 };
 
-async function projectsResponse(
-  token: string,
-  keywords: string
-): Promise<CommandResponse> {
+async function projectsResponse(token: string): Promise<CommandResponse> {
   const apiResponse = await fetch(
-    `https://api.vercel.com/v8/projects/?search=${keywords}&limit=10`,
+    `https://api.vercel.com/v8/projects/?limit=50`,
     {
       method: "GET",
       headers: { Authorization: `Bearer ${token}` },
@@ -56,7 +51,6 @@ async function projectsResponse(
     inputPlaceholder: "Type to search your project",
     view: {
       type: "list",
-      ranking: false,
       options: projects.map((project): ListOption => {
         const framework = findFramework(project.framework);
         return {
