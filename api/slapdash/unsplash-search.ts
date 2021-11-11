@@ -7,13 +7,15 @@ const ACCESS_KEY = process.env.UNSPLASH_ACCESS_KEY;
 export default async (req: VercelRequest, res: VercelResponse) => {
   const query = req.query["keywords"]?.toString().trim() ?? "nature";
   const apiResponse = await fetch(
-    `https://api.unsplash.com/search/photos?query=${query}&orientation=squarish&per_page=30`,
+    `https://api.unsplash.com/search/photos?query=${query}&per_page=30`,
     {
       method: "GET",
       headers: { Authorization: `Client-ID ${ACCESS_KEY}` },
     }
   );
-  const { results } = await apiResponse.json();
+  const { results } = (await apiResponse.json()) as {
+    results: Array<{ urls: { small: string; raw: string } }>;
+  };
   const response: CommandResponse = {
     view: {
       type: "masonry",
@@ -24,7 +26,6 @@ export default async (req: VercelRequest, res: VercelResponse) => {
     },
     inputPlaceholder: "Type to search Unsplash photos",
   };
-
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.json(response);
 };
