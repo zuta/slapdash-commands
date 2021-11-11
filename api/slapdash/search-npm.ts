@@ -113,6 +113,18 @@ async function packageResponse(packageName: string): Promise<CommandResponse> {
           icon: getIcon(metadata.links.bugs),
           action: { type: "open-url", url: metadata.links.bugs },
         },
+        {
+          group: "Install",
+          title: "Copy NPM install command",
+          subtitle: `npm i ${metadata.name}`,
+          action: { type: "copy", value: `npm i ${metadata.name}` },
+        },
+        {
+          group: "Install",
+          title: "Copy Yarn install command",
+          subtitle: `yarn add ${metadata.name}`,
+          action: { type: "copy", value: `yarn add ${metadata.name}` },
+        },
       ]),
     },
   };
