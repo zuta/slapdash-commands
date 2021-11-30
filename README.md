@@ -15,6 +15,7 @@ All Cloud Commands are deployed to the cloud via [Vercel](https://vercel.com/). 
 | [Icon Search](https://github.com/zuta/slapdash-commands/blob/master/api/slapdash/iconfinder.ts)            | Search for icons from [Iconfinder](https://www.iconfinder.com/) and copy & paste them directly to other apps.        | https://www.taraszubyk.com/api/slapdash/iconfinder       |
 | [Honeycomb Boards](https://github.com/zuta/slapdash-commands/blob/master/api/slapdash/honeycomb-boards.ts) | Search your team [Honeycomb Boards](https://honeycomb.io/) and quickly jump to them in the browser.      | https://www.taraszubyk.com/api/slapdash/honeycomb-boards       |
 | [Search NPM](https://github.com/zuta/slapdash-commands/blob/master/api/slapdash/search-npm.ts) | Search NPM packages and quickly jump to their repository or home page in the browser.      | https://www.taraszubyk.com/api/slapdash/search-npm       |
+| [Github Stars](https://github.com/zuta/slapdash-commands/blob/master/api/slapdash/github-stars.ts) | Search Github Repositories that you have starred before.      | https://www.taraszubyk.com/api/slapdash/github-stars       |
 
 ### Local Commands
 
